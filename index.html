@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-sm-3">
+                <h2>Search for a city:</h2>
+                <form id="user-form" class="card-body">
+
+                    <label class="form-label" for="username"></label>
+                    <input name="city" id="city" type="text" autofocus="true" class="formInput" placeholder="Enter a city"/>
+                    <br>
+                    <button type="submit" class="btn">Search</button>
+                </form>
+                <div id="past-searches">
+                    <!-- display past searches from localStorage here-->
+                </div>
+            </div>
+            
+            <div class="col-sm-9">
+                <h2>Display City</h2>
+            <div id="display">
+                <div class="city"></div>
+                <div class="desc"></div>
+                <div class="temp"></div>
+            </div>
+            </div>
+        </div>
+
+
+    </main>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
+
+
