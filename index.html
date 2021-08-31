@@ -8,8 +8,8 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    
-    
+
+
 </head>
 
 <body>
@@ -20,25 +20,32 @@
         <div class="row">
             <div class="col-sm-3">
                 <h2>Search for a city:</h2>
-                <form id="user-form" class="card-body">
-
-                    <label class="form-label" for="username"></label>
-                    <input name="city" id="city" type="text" autofocus="true" class="formInput" placeholder="Enter a city"/>
+                <div class="input">
+                    <input id="inputValue" type="text" placeholder="Enter a city"/>
                     <br>
-                    <button type="submit" class="btn">Search</button>
-                </form>
+                    <input type="submit" value="Submit" class="button"></input>
+                </div>
+                <div class="class"></div>
                 <div id="past-searches">
                     <!-- display past searches from localStorage here-->
                 </div>
             </div>
-            
+
+
             <div class="col-sm-9">
-                <h2>Display City</h2>
-            <div id="display">
-                <div class="city"></div>
-                <div class="desc"></div>
-                <div class="temp"></div>
-            </div>
+                <div id="display-city">
+                    <h2 class="name"></h2>
+                    <p class="temp"></p>
+                    <p class="desc"></p>
+                </div>
+
+                <div class="row">
+                    <div class="card">1</div>
+                    <div class="card">2</div>
+                    <div class="card">3</div>
+                    <div class="card">4</div>
+                    <div class="card">5</div>
+                </div>
             </div>
         </div>
 
@@ -48,5 +55,3 @@
 </body>
 
 </html>
-
-
