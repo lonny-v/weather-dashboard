@@ -11,6 +11,7 @@ button.addEventListener('click', function(){
     
 var inputValue = document.getElementById('inputValue').value;
 console.log(inputValue);
+fiveDay(inputValue)
     fetch ('https://api.openweathermap.org/data/2.5/weather?q='+inputValue+'&units=imperial&APPID=f9d491be2c04cabd7a30f6d0ce1b0f1e')
     .then(response => response.json())
     .then(data => {
@@ -38,9 +39,31 @@ function displayUvIndex (lat, lon) {
     .then(data => {
         console.log(data)
         uvIndex.innerText = 'UV Index ' + data['current']['uvi'];
+        
     }).
     catch(err => alert('Error' + err))
 
+}
+
+
+function fiveDay(city){
+    fetch ('https://api.openweathermap.org/data/2.5/forecast?q='+city+'&units=imperial&APPID=f9d491be2c04cabd7a30f6d0ce1b0f1e')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        var forecast = data.list;
+        console.log(forecast)
+        var HTMLText = ""
+        for (let i = 0; i<forecast.length ; i=i+8) {
+            console.log(i)
+            HTMLText += `<div class="card">
+            <p>${forecast[i].dt}</p>
+            <p>Humditiy: ${forecast[i].main.humidity}</p>
+            <img src="https://openweathermap.org/img/wn/${forecast[i]['weather'][0]['icon']}@2x.png"/> </div>"`
+        }
+        console.log(HTMLText)
+        document.querySelector(".display2").innerHTML = HTMLText
+    })
 }
 
 
