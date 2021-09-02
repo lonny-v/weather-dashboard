@@ -21,12 +21,12 @@
             <div class="col-sm-3">
                 <h2>Search for a city:</h2>
                 <div class="input">
-                    <input id="inputValue" type="text" placeholder="Enter a city"/>
+                    <input id="inputValue" type="text" placeholder="Enter a city" />
                     <br>
                     <input type="submit" value="Submit" class="button"></input>
                 </div>
                 <div class="class"></div>
-                <div id="past-searches">
+                <div id="pastSearches">
                     <!-- display past searches from localStorage here-->
                 </div>
             </div>
@@ -34,26 +34,33 @@
 
             <div class="col-sm-9">
                 <div id="display-city">
-                    <h2 id="name"></h2>
+                    <div id="display-name-date-icon">
+                        <h2 id="name"></h2>
+                    </br>
+                        <h2 id="displayDate"></h2>
+                        <img id="img" src="">
+                    </div>
+
                     <p id="temp"></p>
-                    <p id="desc"></p>
                     <p id="windSpeed"></p>
+                    <p id="humidity"></p>
                     <p id="uvIndex"></p>
-                    <img id="img" src="">
+
                 </div>
 
                 <div class="display2 row">
-                    <div class="card">1</div>
-                    <div class="card">2</div>
-                    <div class="card">3</div>
-                    <div class="card">4</div>
-                    <div class="card">5</div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
                 </div>
             </div>
         </div>
 
 
     </main>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
