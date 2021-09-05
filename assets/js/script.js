@@ -82,6 +82,6 @@ function fiveDay(city){
             <img src="https://openweathermap.org/img/wn/${forecast[i]['weather'][0]['icon']}@2x.png"/> </div>`
         }
         //console.log(HTMLText)
-        //document.querySelector(".display2").innerHTML = HTMLText
+        document.querySelector(".display2").innerHTML = HTMLText
     })
 }
