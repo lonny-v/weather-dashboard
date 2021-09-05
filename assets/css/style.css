@@ -81,3 +81,11 @@ user-form {
 #display-city h2 {
     text-align: left;
 }
+
+.pastSearchesButton {
+    color: white;
+    background-color: rgb(222, 228, 231);
+    font-weight: bold;
+    width: 250px;
+    border-radius: 2px;
+}
